@@ -1,6 +1,10 @@
 import React from "react";
+import GoogleLogo from "../../Assets/Image/google.svg";
+import useFirebase from "../../hook/useFirebase";
+import "./SignUp.css";
 
-const SignUp1 = () => {
+const SignUp = () => {
+  const { signInWithGoogle } = useFirebase();
   return (
     <div className="auth-form-container ">
       <div className="auth-form">
@@ -41,8 +45,8 @@ const SignUp1 = () => {
           <div className="line-right" />
         </div>
         <div className="input-wrapper">
-          <button className="google-auth">
-            {/* <img src={GoogleLogo} alt="" /> */}
+          <button onClick={signInWithGoogle} className="google-auth">
+            <img src={GoogleLogo} alt="" />
             <p> Continue with Google </p>
           </button>
         </div>
@@ -51,4 +55,4 @@ const SignUp1 = () => {
   );
 };
 
-export default SignUp1;
+export default SignUp;

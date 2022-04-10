@@ -1,8 +1,12 @@
 .navbar {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbar a {
   margin-right: 10px;
+  padding: 5px;
   text-decoration: none;
   color: black;
 }
